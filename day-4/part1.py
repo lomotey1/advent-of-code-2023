@@ -2,10 +2,13 @@ import re
 
 points = 0
 
-def get_score(number):
-    if number == 0: return 0
+'''
+Returns scoring based on the number of cards won.
+'''
+def get_score(winning_cards):
+    if winning_cards == 0: return 0
     score = 1
-    for i in range (number + 1, 2, -1):
+    for i in range (winning_cards + 1, 2, -1):
         score *= 2
     return score
 
